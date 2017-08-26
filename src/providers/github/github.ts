@@ -17,8 +17,8 @@ export class GithubProvider {
 
   buscarUsuario(usuario:string){
       return new Promise((resolve, reject)=> {
-        // https://api.github.com/users/cposada23?client_id=4ff9389562a964f7c898&client_secret=40c680627f6449863f9fd448acc4e7f0e3fb72ff
-        var link:string = this.apiLink + usuario + '?client_id=4ff9389562a964f7c898&client_secret=40c680627f6449863f9fd448acc4e7f0e3fb72ff'
+        
+        var link:string = this.apiLink + usuario 
         this.http.get(link).map(res=>res.json()).subscribe(
           (data) => {
             resolve(data)
